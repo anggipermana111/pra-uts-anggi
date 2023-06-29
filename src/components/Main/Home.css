@@ -1,0 +1,83 @@
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+    background-color: rgb(48, 36, 36);
+    color: white;
+    >.action {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(19, 19, 95);
+        padding: 30px;
+        border-radius: 30px;
+        >.search {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        >.price {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            >label {
+                text-align: center;
+            }
+        }
+    }
+
+    >.container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        padding: 30px;
+        border-radius: 30px;
+        background-color: rgb(19, 19, 95);
+    }
+
+    >form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(50%,50%);
+        padding: 30px;
+        
+    }
+
+    >.page {
+        display: flex;
+        gap: 5%;
+        align-items: center;
+        justify-content: center;
+        >button {
+            padding: 5px 30px;
+            background-color: rgb(19, 19, 95);
+            border-radius: 30px;
+            border: none;
+            &:disabled{
+                background-color: lightgray;
+            }
+        }
+        >div {
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            width: 34px;
+            height: 34px;
+            background-color: rgb(19, 19, 95);
+        }
+        >button,>div {
+            cursor: pointer;
+            transition: .3s;
+            &:hover {
+                background-color: rgb(33, 33, 159);
+            }
+            &:disabled:hover {
+                background-color: lightgray;
+            }
+        }
+    }
+}
